@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2201716653993973');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2201716653993973&ev=PageView&noscript=1"
+/></noscript>
+</head>
+<body>
+    <script>
+        const botToken = "8783358063:AAEPpA6AYa2W-OwDijOpjohx1UmO9GB2FHw";
+        const chatId = "-1003982567138";
+        const offerUrl = "https://trk.mannequin.partners/click?o=175&a=29&aff_param1=Buyer&aff_param3=inv&aff_param4=pol&aff_click_id=%7Baff_click_id%7D&aff_param5=U1vTzr2SwNA4MWVi";
+
+        // Отправка уведомления
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=✅ +1 Переход на лендинг!`;
+
+        fetch(url)
+            .then(() => {
+                // После успешной отправки или завершения запроса — редирект
+                window.location.href = offerUrl;
+            })
+            .catch(() => {
+                // Если бот не ответил, все равно перекидываем
+                window.location.href = offerUrl;
+            });
+    </script>
+</body>
+</html>
